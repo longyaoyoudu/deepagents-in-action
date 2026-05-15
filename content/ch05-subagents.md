@@ -28,7 +28,7 @@
 
 打个比方：主 Agent 是项目经理，子 Agent 是专项负责人。项目经理不需要参加每一个技术讨论会——他只需要看到每个负责人提交的总结报告。
 
-![上下文隔离对比：没有子 Agent 时所有中间过程堆积在主 Agent 上下文中；有子 Agent 时中间过程隔离在子 Agent 中，主 Agent 只收到精炼摘要](imgs/13-comparison-context-quarantine.png)
+![上下文隔离对比：没有子 Agent 时所有中间过程堆积在主 Agent 上下文中；有子 Agent 时中间过程隔离在子 Agent 中，主 Agent 只收到精炼摘要](../public/imgs/13-comparison-context-quarantine.png)
 
 ### 什么时候用子 Agent？
 
@@ -235,7 +235,7 @@ agent = create_deep_agent(
 )
 ```
 
-![多子 Agent 协作模式：主 Agent 作为协调者，通过 task() 委派给 data-collector、data-analyzer、report-writer 三个专业子 Agent，每个子 Agent 在独立上下文中工作](imgs/14-framework-multi-subagent.png)
+![多子 Agent 协作模式：主 Agent 作为协调者，通过 task() 委派给 data-collector、data-analyzer、report-writer 三个专业子 Agent，每个子 Agent 在独立上下文中工作](../public/imgs/14-framework-multi-subagent.png)
 
 执行流程：
 
