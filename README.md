@@ -34,8 +34,10 @@
 | 第 2 章 | 快速上手 — 5 分钟构建你的第一个 Deep Agent |
 | 第 3 章 | 虚拟文件系统 — Deep Agents 的 Context Engineering 核心 |
 | 第 4 章 | 任务规划与分解 — 让 Agent 学会拆解复杂任务 |
+| 第 5 章 | 子 Agent 与上下文隔离 — 让 Agent 学会委派 |
+| 第 6 章 | 异步子 Agent — 让主 Agent 同时驱动多个子任务 |
 
-后续还有更多主题正在规划中，涵盖子 Agent、长期记忆、Human-in-the-Loop、Skills、沙箱执行、流式前端、实战项目与生产部署，持续更新中。
+后续还有更多主题正在规划中，涵盖长期记忆、Human-in-the-Loop、Skills、沙箱执行、流式前端、实战项目与生产部署，持续更新中。
 
 ---
 
