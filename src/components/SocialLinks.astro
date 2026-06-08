@@ -3,9 +3,10 @@ interface Props {
   bilibili?: string;
   xhs?: string;
   slides?: Array<{ title?: string; bilibili?: string; xhs?: string }>;
+  hideXhs?: boolean;
 }
 
-const { bilibili, xhs, slides = [] } = Astro.props;
+const { bilibili, xhs, slides = [], hideXhs = false } = Astro.props;
 
 const items = slides.some(s => s.bilibili || s.xhs) 
   ? slides 
@@ -37,22 +38,24 @@ const items = slides.some(s => s.bilibili || s.xhs)
           </svg>
           <span>{item.bilibili ? 'B 站视频讲解' : 'B 站视频（即将上线）'}</span>
         </a>
-        <a
-          href={item.xhs || '#'}
-          class:list={[
-            'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all border',
-            item.xhs
-              ? 'bg-red-50 border-red-200 text-red-600 hover:bg-red-100 hover:border-red-300'
-              : 'bg-paper-warm border-gold-pale/30 text-ink-muted/40 pointer-events-none',
-          ]}
-          target={item.xhs ? '_blank' : undefined}
-          rel={item.xhs ? 'noopener' : undefined}
-        >
-          <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 7h-1v1h1v1.5h-1V13h-1.5v-1.5h-1V13H11.5v-1.5h-1V13H9v-1.5H8V10h1V9H8V7.5h1v-1h1.5v1h1v-1H13v1h1v-1h1.5v1h1V9z"/>
-          </svg>
-          <span>{item.xhs ? '小红书图文' : '小红书图文（即将上线）'}</span>
-        </a>
+        {!hideXhs && (
+          <a
+            href={item.xhs || '#'}
+            class:list={[
+              'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all border',
+              item.xhs
+                ? 'bg-red-50 border-red-200 text-red-600 hover:bg-red-100 hover:border-red-300'
+                : 'bg-paper-warm border-gold-pale/30 text-ink-muted/40 pointer-events-none',
+            ]}
+            target={item.xhs ? '_blank' : undefined}
+            rel={item.xhs ? 'noopener' : undefined}
+          >
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 7h-1v1h1v1.5h-1V13h-1.5v-1.5h-1V13H11.5v-1.5h-1V13H9v-1.5H8V10h1V9H8V7.5h1v-1h1.5v1h1v-1H13v1h1v-1h1.5v1h1V9z"/>
+            </svg>
+            <span>{item.xhs ? '小红书图文' : '小红书图文（即将上线）'}</span>
+          </a>
+        )}
       </div>
     ))}
   </div>
