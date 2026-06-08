@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "documentation-writer": {
+      "source": "ob-labs/agentseek",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/documentation-writer/SKILL.md",
+      "computedHash": "9c77029a004d596a0f3b74f3f0009c251fce215b0d1d4dd27f1f57abfd3041cd"
+    },
+    "github-repo-cards": {
+      "source": "ob-labs/agentseek",
+      "sourceType": "github",
+      "skillPath": "skills/github-repo-cards/SKILL.md",
+      "computedHash": "e5f000a1fe28f34ae524baeb66cf749bfcf5f8adf74312b8e4fa7347f59c2453"
+    },
+    "langchain-dev-guide": {
+      "source": "ob-labs/agentseek",
+      "sourceType": "github",
+      "skillPath": "skills/langchain-dev-guide/SKILL.md",
+      "computedHash": "3beb40c998a875bc3a7b12eee2fe9704f620cbe532ee4173a67369014b810da6"
+    },
+    "langsmith-trace": {
+      "source": "ob-labs/agentseek",
+      "sourceType": "github",
+      "skillPath": "skills/langsmith-trace/SKILL.md",
+      "computedHash": "bc75f1052eb39b77cb716cb1a921c597d3617a0fab61794ad7a6b9c1f2b62e83"
+    },
+    "local-greeting": {
+      "source": "ob-labs/agentseek",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/local-greeting/SKILL.md",
+      "computedHash": "2117bca201d2dc4a493835d3b5be0ff19548a8608b42816570e188a1607f808a"
+    }
+  }
+}
