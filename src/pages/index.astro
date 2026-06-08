@@ -17,6 +17,17 @@ const grouped = sections.map(section => ({
 }));
 
 const publishedCount = sorted.filter(ch => ch.data.published && ch.data.section !== '准备篇').length;
+
+let starCount: number | null = null;
+try {
+  const res = await fetch('https://api.github.com/repos/webup/deepagents-course', {
+    headers: { 'User-Agent': 'deepagents-site-build' },
+  });
+  if (res.ok) {
+    const data = await res.json();
+    if (typeof data.stargazers_count === 'number') starCount = data.stargazers_count;
+  }
+} catch {}
 ---
 
 <BaseLayout title="Deep Agents 实战 — 从零构建生产级 AI Agent 的完整指南">
@@ -75,8 +86,8 @@ const publishedCount = sorted.filter(ch => ch.data.published && ch.data.section 
             GitHub Star
             <span
               id="gh-star-count"
-              class="ml-1 px-1.5 py-0.5 rounded text-xs font-mono bg-gold-pale/60 text-gold border border-gold/20 hidden"
-            ></span>
+              class:list={["ml-1 px-1.5 py-0.5 rounded text-xs font-mono bg-gold-pale/60 text-gold border border-gold/20", !starCount && "hidden"]}
+            >{starCount ?? ''}</span>
           </a>
         </div>
 
@@ -127,15 +138,12 @@ const publishedCount = sorted.filter(ch => ch.data.published && ch.data.section 
 </BaseLayout>
 
 <script>
-  // Fetch the latest star count on page load so the badge reflects the live
-  // value, not the SSG-baked snapshot. Cached via sessionStorage to avoid
-  // hammering GitHub on every internal navigation.
   (async () => {
     const el = document.getElementById('gh-star-count');
     if (!el) return;
 
     const CACHE_KEY = 'gh-star-count:webup/deepagents-course';
-    const TTL_MS = 5 * 60 * 1000; // 5 minutes
+    const TTL_MS = 30 * 60 * 1000; // 30 minutes
 
     const apply = (n: number) => {
       el.textContent = String(n);
@@ -154,10 +162,8 @@ const publishedCount = sorted.filter(ch => ch.data.published && ch.data.section 
     } catch {}
 
     try {
-      const res = await fetch('https://api.github.com/repos/webup/deepagents-course', {
-        headers: { Accept: 'application/vnd.github+json' },
-      });
-      if (!res.ok) return;
+      const res = await fetch('https://api.github.com/repos/webup/deepagents-course');
+      if (!res.ok) throw new Error(String(res.status));
       const data = await res.json();
       if (typeof data.stargazers_count === 'number') {
         apply(data.stargazers_count);
@@ -165,8 +171,6 @@ const publishedCount = sorted.filter(ch => ch.data.published && ch.data.section 
           sessionStorage.setItem(CACHE_KEY, JSON.stringify({ n: data.stargazers_count, t: Date.now() }));
         } catch {}
       }
-    } catch {
-      // Network failed — leave the SSG fallback as-is.
-    }
+    } catch {}
   })();
 </script>
