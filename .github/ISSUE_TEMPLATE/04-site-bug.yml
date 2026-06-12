@@ -1,0 +1,51 @@
+name: 🌐 网站问题
+description: 课程网站排版错乱、链接失效、图片加载不出来等
+title: "[网站] "
+labels: ["网站"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈网站问题!🛠️
+        > 💡 如果页面样式看起来错乱,**很可能是浏览器缓存**。请先按 `Cmd/Ctrl + Shift + R` 强制刷新,或用无痕窗口打开试试。仍有问题再提交。
+  - type: input
+    id: url
+    attributes:
+      label: 页面 URL
+      description: 出问题的页面链接
+      placeholder: https://datawhalechina.github.io/deepagents-in-action/chapters/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 排版错乱 / 链接点不开 / 图片加载不出 / 其他?
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: 设备 / 浏览器
+      options:
+        - 桌面端 — Chrome
+        - 桌面端 — Safari
+        - 桌面端 — Firefox
+        - 桌面端 — Edge
+        - 移动端 — iOS
+        - 移动端 — Android
+        - 其他 / 不确定
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图（选填）
+      description: 直接把截图拖进来即可,一图胜千言
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已尝试强制刷新（Cmd/Ctrl + Shift + R）或无痕窗口，问题依然存在
+          required: true

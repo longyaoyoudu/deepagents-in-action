@@ -1,0 +1,30 @@
+name: 💡 内容 / 改进建议
+description: 希望补充某个主题、调整章节顺序，或对讲法提出改进
+title: "[建议] "
+labels: ["建议"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎你为课程出谋划策!✨
+        > 涉及较大结构调整(如重写整章、新增篇章)的想法,建议先在 [Discussions Ideas](https://github.com/datawhalechina/deepagents-in-action/discussions/categories/ideas) 发起讨论,聊成熟了再开 Issue。
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议内容
+      description: 你希望补充什么主题、怎么调整,或哪里可以讲得更好?
+      placeholder: 例如：希望在第 5 章补充一个多子 Agent 协作的完整示例……
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: 理由 / 场景（选填）
+      description: 为什么需要这个改进?你在什么场景下遇到了困惑?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已搜索过现有 Issue 和 Discussions，确认这不是重复建议
+          required: true

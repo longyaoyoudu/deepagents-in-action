@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 我有疑问 / 想提问（Q&A）
+    url: https://github.com/datawhalechina/deepagents-in-action/discussions/categories/q-a
+    about: 学习中卡住了、概念没搞懂？来 Q&A 提问，作者和同学都会帮你解答。
+  - name: 🗣️ 自由讨论 / 想法交流（General）
+    url: https://github.com/datawhalechina/deepagents-in-action/discussions/categories/general
+    about: 想聊聊 Agent 开发、分享思路或随便聊聊？来 General 板块。
+  - name: 🙌 展示你的作品（Show and tell）
+    url: https://github.com/datawhalechina/deepagents-in-action/discussions/categories/show-and-tell
+    about: 用 Deep Agents 做了好玩的东西？来这里晒一晒，互相启发。
+  - name: 📺 B 站视频合集
+    url: https://space.bilibili.com/28357052/lists/7757577?type=season
+    about: 配套视频讲解，边看边学。
