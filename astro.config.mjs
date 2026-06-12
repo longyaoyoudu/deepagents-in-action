@@ -3,8 +3,8 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://webup.github.io',
-  base: '/deepagents-course',
+  site: 'https://datawhalechina.github.io',
+  base: '/deepagents-in-action',
   vite: {
     plugins: [tailwindcss()],
   },

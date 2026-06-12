@@ -44,31 +44,31 @@ npx skills add ob-labs/agentseek --skill langsmith-trace
 
 基于 [AgentSeek](https://github.com/ob-labs/agentseek) 工程化套件，帮助学员快速搭建开发环境：
 
-- [`agentseek create` 搭建模板应用](https://webup.github.io/deepagents-course/chapters/pre01-agentseek-create/)：拉取预制模板并前后端联调运行
-- [`agentseek skills` 安装开发技能](https://webup.github.io/deepagents-course/chapters/pre02-agentseek-skills/)：为 AI 编码助手加载 LangChain 工程经验
+- [`agentseek create` 搭建模板应用](https://datawhalechina.github.io/deepagents-in-action/chapters/pre01-agentseek-create/)：拉取预制模板并前后端联调运行
+- [`agentseek skills` 安装开发技能](https://datawhalechina.github.io/deepagents-in-action/chapters/pre02-agentseek-skills/)：为 AI 编码助手加载 LangChain 工程经验
 
 ### 认知篇
 
 | 章节 | 标题 |
 |------|------|
-| 第 1 章 | [从 Agent Framework 到 Agent Harness — Deep Agents 的诞生逻辑](https://webup.github.io/deepagents-course/chapters/ch01-agent-harness/) |
-| 第 2 章 | [快速上手 — 5 分钟构建你的第一个 Deep Agent](https://webup.github.io/deepagents-course/chapters/ch02-quickstart/) |
+| 第 1 章 | [从 Agent Framework 到 Agent Harness — Deep Agents 的诞生逻辑](https://datawhalechina.github.io/deepagents-in-action/chapters/ch01-agent-harness/) |
+| 第 2 章 | [快速上手 — 5 分钟构建你的第一个 Deep Agent](https://datawhalechina.github.io/deepagents-in-action/chapters/ch02-quickstart/) |
 
 ### 核心篇
 
 | 章节 | 标题 |
 |------|------|
-| 第 3 章 | [虚拟文件系统 — Deep Agents 的 Context Engineering 核心](https://webup.github.io/deepagents-course/chapters/ch03-virtual-filesystem/) |
-| 第 4 章 | [任务规划与分解 — 让 Agent 学会拆解复杂任务](https://webup.github.io/deepagents-course/chapters/ch04-task-planning/) |
-| 第 5 章 | [子 Agent 与上下文隔离 — 让 Agent 学会委派](https://webup.github.io/deepagents-course/chapters/ch05-subagents/) |
-| 第 6 章 | [异步子 Agent — 让主 Agent 同时驱动多个子任务](https://webup.github.io/deepagents-course/chapters/ch06-async-subagents/) |
+| 第 3 章 | [虚拟文件系统 — Deep Agents 的 Context Engineering 核心](https://datawhalechina.github.io/deepagents-in-action/chapters/ch03-virtual-filesystem/) |
+| 第 4 章 | [任务规划与分解 — 让 Agent 学会拆解复杂任务](https://datawhalechina.github.io/deepagents-in-action/chapters/ch04-task-planning/) |
+| 第 5 章 | [子 Agent 与上下文隔离 — 让 Agent 学会委派](https://datawhalechina.github.io/deepagents-in-action/chapters/ch05-subagents/) |
+| 第 6 章 | [异步子 Agent — 让主 Agent 同时驱动多个子任务](https://datawhalechina.github.io/deepagents-in-action/chapters/ch06-async-subagents/) |
 
 ### 进阶篇
 
 | 章节 | 标题 |
 |------|------|
-| 第 7 章 | [Skills — 可复用的 Agent 能力包](https://webup.github.io/deepagents-course/chapters/ch07-skills/) |
-| 第 8 章 | [长期记忆 — 让 Agent 拥有跨对话的记忆](https://webup.github.io/deepagents-course/chapters/ch08-long-term-memory/) |
+| 第 7 章 | [Skills — 可复用的 Agent 能力包](https://datawhalechina.github.io/deepagents-in-action/chapters/ch07-skills/) |
+| 第 8 章 | [长期记忆 — 让 Agent 拥有跨对话的记忆](https://datawhalechina.github.io/deepagents-in-action/chapters/ch08-long-term-memory/) |
 
 后续还有 Human-in-the-Loop、沙箱执行等进阶内容，以及实战篇（流式前端、数据分析 Agent、生产部署）正在规划中，持续更新。
 

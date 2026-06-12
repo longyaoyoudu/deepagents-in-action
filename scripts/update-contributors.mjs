@@ -29,7 +29,7 @@ async function fetchContributors(repoSlug) {
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
   const headers = {
     Accept: 'application/vnd.github+json',
-    'User-Agent': 'deepagents-course-contributor-wall',
+    'User-Agent': 'deepagents-in-action-contributor-wall',
   };
 
   if (token) {

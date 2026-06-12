@@ -26,7 +26,7 @@ for (const [id, meta] of Object.entries(manifest)) {
   body = body.replace(/^#\s+.+\n*/, '');
 
   // Rewrite relative image paths to include base path
-  const BASE = '/deepagents-course';
+  const BASE = '/deepagents-in-action';
   body = body.replace(/!\[([\s\S]*?)\]\(\.\.\/public\/imgs\//g, `![$1](${BASE}/imgs/`);
 
   const frontmatter = [
