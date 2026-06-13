@@ -208,6 +208,13 @@ deepagents-in-action/
   </a><br />
   <sub>1 commit</sub>
 </td>
+<td align="center" valign="top" width="120">
+  <a href="https://github.com/YangLeeFangfei">
+    <img src="https://avatars.githubusercontent.com/u/111680955?v=4&s=144" width="72" height="72" alt="YangLeeFangfei" style="border-radius:50%;" /><br />
+    <sub><strong>YangLeeFangfei</strong></sub>
+  </a><br />
+  <sub>1 commit</sub>
+</td>
 </tr>
 </table>
 <!-- contributors:end -->
