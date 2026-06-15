@@ -19,7 +19,7 @@ uv pip install deepagents langchain-openai
 poetry add deepagents langchain-openai
 ```
 
-Python 版本要求 3.10+。
+Python 版本要求 3.11+。
 
 ### 配置 API Key
 

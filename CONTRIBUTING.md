@@ -43,10 +43,12 @@ npm run dev
 
 ```
 content/
+├── pre01-agentseek-create.md
+├── pre02-agentseek-skills.md
 ├── ch01-agent-harness.md
 ├── ch02-quickstart.md
-├── ch03-virtual-filesystem.md
-└── ch04-task-planning.md
+├── ...
+└── ch08-long-term-memory.md
 ```
 
 **章节元数据**（标题、发布日期、视频链接）在 `scripts/chapters.json`。

@@ -4,7 +4,7 @@
 
 在 AgentSeek 体系中，**Skill（技能）** 是一种教会 AI 编码助手如何执行特定任务的知识包。每个 Skill 是一个 `SKILL.md` 文件，包含经过验证的工程经验——当你在 Claude Code、Codex、Cursor 等工具中开发时，助手会自动读取并应用这些知识。
 
-目前我们给大家提供了两个核心技能：
+目前我们给大家重点提供了两个核心技能：
 
 - **`langchain-dev-guide`** — LangChain / LangGraph / DeepAgents 开发中的踩坑经验和解决方案（20+ 条）
 - **`langsmith-trace`** — 利用 LangSmith CLI 拉取和分析 Trace，帮助调试 Agent 执行流程

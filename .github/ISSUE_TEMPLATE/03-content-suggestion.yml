@@ -6,13 +6,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        欢迎你为课程出谋划策!✨
-        > 涉及较大结构调整(如重写整章、新增篇章)的想法,建议先在 [Discussions Ideas](https://github.com/datawhalechina/deepagents-in-action/discussions/categories/ideas) 发起讨论,聊成熟了再开 Issue。
+        欢迎你为课程出谋划策！✨
+        > 涉及较大结构调整（如重写整章、新增篇章）的想法，建议先在 [Discussions Ideas](https://github.com/datawhalechina/deepagents-in-action/discussions/categories/ideas) 发起讨论，聊成熟了再开 Issue。
   - type: textarea
     id: suggestion
     attributes:
       label: 建议内容
-      description: 你希望补充什么主题、怎么调整,或哪里可以讲得更好?
+      description: 你希望补充什么主题、怎么调整，或哪里可以讲得更好？
       placeholder: 例如：希望在第 5 章补充一个多子 Agent 协作的完整示例……
     validations:
       required: true
@@ -20,7 +20,7 @@ body:
     id: rationale
     attributes:
       label: 理由 / 场景（选填）
-      description: 为什么需要这个改进?你在什么场景下遇到了困惑?
+      description: 为什么需要这个改进？你在什么场景下遇到了困惑？
   - type: checkboxes
     id: checks
     attributes:

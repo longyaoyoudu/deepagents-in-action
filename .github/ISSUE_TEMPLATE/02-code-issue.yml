@@ -6,13 +6,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        遇到代码或环境问题别着急,按下面填清楚,我们和其他同学都能更快帮到你。💪
-        > 如果只是「不确定该怎么用」这类开放性问题,建议先去 [Discussions Q&A](https://github.com/datawhalechina/deepagents-in-action/discussions/categories/q-a) 提问。
+        遇到代码或环境问题别着急，按下面填清楚，我们和其他同学都能更快帮到你。💪
+        > 如果只是「不确定该怎么用」这类开放性问题，建议先去 [Discussions Q&A](https://github.com/datawhalechina/deepagents-in-action/discussions/categories/q-a) 提问。
   - type: dropdown
     id: chapter
     attributes:
       label: 所在章节
-      description: 哪一章的代码 / 示例?
+      description: 哪一章的代码 / 示例？
       options:
         - 准备篇（上）— AgentSeek CLI create
         - 准备篇（下）— AgentSeek CLI skills
@@ -31,7 +31,7 @@ body:
     id: problem
     attributes:
       label: 问题描述 / 复现步骤
-      description: 你做了什么、期望发生什么、实际发生了什么?最好能让我们照着复现
+      description: 你做了什么、期望发生什么、实际发生了什么？最好能让我们照着复现
       placeholder: |
         1. 运行 xxx
         2. 期望：……
@@ -42,7 +42,7 @@ body:
     id: logs
     attributes:
       label: 报错信息 / 日志
-      description: 把完整的报错堆栈贴进来(会自动按代码块渲染,无需手动加反引号)
+      description: 把完整的报错堆栈贴进来（会自动按代码块渲染，无需手动加反引号）
       render: shell
   - type: textarea
     id: env
