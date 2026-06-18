@@ -35,6 +35,7 @@ const sectionColors: Record<string, string> = {
 };
 const tagClass = sectionColors[section] || 'bg-ink text-white';
 const isExtra = section === '准备篇';
+const hasXhs = !!xhs || slides.some(s => s.xhs);
 ---
 
 <BaseLayout title={`${isExtra ? '' : `第 ${chapter} 章：`}${title} — Deep Agents 实战`} description={description}>
@@ -67,7 +68,7 @@ const isExtra = section === '准备篇';
       <PdfDownload slides={slides} />
     )}
 
-    <SocialLinks bilibili={bilibili} xhs={xhs} slides={slides} hideXhs={isExtra} />
+    <SocialLinks bilibili={bilibili} xhs={xhs} slides={slides} hideXhs={isExtra && !hasXhs} />
 
     <ChapterNav prev={prev} next={next} />
   </article>
