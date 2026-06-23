@@ -226,7 +226,7 @@ LANGSMITH_API_KEY=<your-langsmith-key>
 
 ### 配置要点
 
-- **模型供应商**：设置 `AGENTSEEK_MODEL_PROVIDER` 和 `AGENTSEEK_MODEL`，选择一个供应商填写对应 API Key 即可。国内用户推荐使用通义千问（DashScope）。
+- **模型供应商**：设置 `AGENTSEEK_MODEL_PROVIDER` 和 `AGENTSEEK_MODEL`，选择一个供应商填写对应 API Key 即可。国内用户推荐使用通义千问（DashScope）。使用其他模型时只需修改 `AGENTSEEK_MODEL_PROVIDER`、`AGENTSEEK_MODEL`、`OPENAI_API_BASE`和`OPENAI_API_KEY`,`AGENTSEEK_MODEL_PROVIDER`国内模型一般选择`openai`或者`anthropic`,`AGENTSEEK_MODEL`填写你所使用的模型名称，`OPENAI_API_BASE`根据选择的模型提供商填写对应的baseurl，`OPENAI_API_KEY`这里填写API key。
 - **Tavily 搜索 Key**：`deepagents/research` 模板需要网络搜索，在 [app.tavily.com](https://app.tavily.com/) 获取免费 Key。
 - **LangSmith Tracing**（强烈推荐）：在 [smith.langchain.com](https://smith.langchain.com/) 注册后，进入 Settings → API Keys 创建 Token 填入即可。个人用户每月 5000 次免费 Trace 额度。
 
