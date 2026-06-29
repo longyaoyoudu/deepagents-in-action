@@ -178,7 +178,17 @@ agentseek create --list-templates
 > ```
 > #### 方式二：使用 GitHub 加速代理（推荐）
 >
-> 无需本地代理，通过公共加速服务拉取模板仓库。以下示例使用 ghproxy.net（已验证可用，也可自行搜索其他加速服务）。
+> 无需本地代理，通过公共加速服务拉取模板仓库。以下示例使用 ghproxy.net（经过实测验证可用）。
+
+> **验证加速服务可用性**
+>
+> 建议在正式使用前先测试加速服务是否正常：
+>
+> ```bash
+> git ls-remote https://ghproxy.net/https://github.com/ob-labs/agentseek.git
+> ```
+>
+> 如果返回仓库引用信息则说明服务可用。ghproxy.net 经过实测稳定可用；其他常见加速服务（如 gitclone.com）在实际测试中返回 502 错误，不推荐使用。
 >
 > 克隆到当前目录再复制
 >
@@ -339,6 +349,13 @@ LANGSMITH_API_KEY=<your-langsmith-key>
   - `AGENTSEEK_MODEL_PROVIDER` 国内模型一般选择 `openai` 或者 `anthropic`，`AGENTSEEK_MODEL` 填写你所使用的模型名称，`OPENAI_API_BASE` 根据选择的模型提供商填写对应的 Base URL，`OPENAI_API_KEY` 这里填写 API Key。
 - **Tavily 搜索 Key**：`deepagents/research` 模板需要网络搜索，在 [app.tavily.com](https://app.tavily.com/) 获取免费 Key。
 - **LangSmith Tracing**（强烈推荐）：在 [smith.langchain.com](https://smith.langchain.com/) 注册后，进入 Settings → API Keys 创建 Token 填入即可。个人用户每月 5000 次免费 Trace 额度。
+- **Hugging Face 加速**：如果你的模板或代码涉及从 Hugging Face Hub 下载模型，可以通过环境变量配置镜像加速：
+
+  ```bash
+  export HF_ENDPOINT=https://hf-mirror.com
+  ```
+
+  `hf-mirror.com` 经过实测验证可用。配置后所有 Hugging Face 下载（`from_pretrained`、`load_dataset` 等）会自动走镜像。
 
 ## 运行模板应用
 
@@ -348,6 +365,14 @@ LANGSMITH_API_KEY=<your-langsmith-key>
 uv sync
 npm install --prefix frontend
 ```
+
+> **国内网络提示**：如果 `uv sync` 下载 Python 依赖缓慢或失败，可以配置 PyPI 镜像源。经过实测验证，阿里云镜像在受限网络环境下最为稳定：
+>
+> ```bash
+> UV_INDEX_URL=https://mirrors.aliyun.com/pypi/simple uv sync
+> ```
+>
+> 其他常见镜像（如 TUNA、USTC）在实际测试中分别出现部分 wheel 返回 403 或连接不稳定的情况，不推荐作为首选。
 
 ### 第六步：启动后端
 

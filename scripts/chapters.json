@@ -121,7 +121,7 @@
     "order": 10,
     "description": "Agent 的两种记忆（短期 Checkpointer / 长期 Store）、CompositeBackend 路径路由、四种实用场景、从 InMemoryStore 到 PostgresStore 的生产升级路径。",
     "slides": [
-      { "id": "ch08", "title": "Lec 11: 长期记忆与 CompositeBackend" }
+      { "id": "ch08", "title": "Lec 11: 长期记忆与 CompositeBackend", "bilibili": "https://www.bilibili.com/video/BV1cd7e6yEeC/", "xhs": "http://xhslink.com/o/6q9xm3mKem8" }
     ],
     "published": true,
     "pubDate": "2026-06-11"
